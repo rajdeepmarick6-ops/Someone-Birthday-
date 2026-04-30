@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 14th Birthday Suru 🤍</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#fffaf2,#f7e7d3,#f3dcc3);
+overflow:hidden;
+height:100vh;
+color:#6d4c41;
+}
+
+/* Premium Animated Background */
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.blur{
+position:absolute;
+border-radius:50%;
+filter:blur(80px);
+opacity:0.5;
+animation:move 12s infinite alternate;
+}
+
+.blur1{
+width:300px;
+height:300px;
+background:#ffe0c7;
+top:-50px;
+left:-50px;
+}
+
+.blur2{
+width:350px;
+height:350px;
+background:#f7d7be;
+bottom:-80px;
+right:-80px;
+}
+
+.blur3{
+width:250px;
+height:250px;
+background:#fff0df;
+top:40%;
+left:40%;
+}
+
+@keyframes move{
+from{
+transform:translateY(0px) translateX(0px);
+}
+to{
+transform:translateY(30px) translateX(20px);
+}
+}
+
+/* Floating Emojis */
+
+.heart{
+position:absolute;
+font-size:22px;
+opacity:0.5;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+50%{
+opacity:0.7;
+}
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+}
+
+/* Pages */
+
+.page{
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+padding:20px;
+animation:fade 1s;
+}
+
+.active{
+display:flex;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Premium Glass Card */
+
+.card{
+position:relative;
+background:rgba(255,255,255,0.35);
+backdrop-filter:blur(18px);
+padding:45px;
+border-radius:35px;
+box-shadow:
+0 10px 40px rgba(0,0,0,0.12),
+inset 0 1px 1px rgba(255,255,255,0.4);
+width:90%;
+max-width:900px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.4);
+overflow:hidden;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:
+0 15px 50px rgba(0,0,0,0.18),
+0 0 40px rgba(255,255,255,0.35);
+}
+
+/* Shining Card Effect */
+
+.card::before{
+content:'';
+position:absolute;
+top:-100%;
+left:-100%;
+width:200%;
+height:200%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.25),
+transparent
+);
+transform:rotate(25deg);
+animation:shine 6s infinite;
+pointer-events:none;
+}
+
+@keyframes shine{
+0%{
+transform:translateX(-100%) rotate(25deg);
+}
+100%{
+transform:translateX(100%) rotate(25deg);
+}
+}
+
+/* Typography */
+
+h1{
+font-size:54px;
+font-weight:700;
+margin-bottom:15px;
+color:#7b5b4d;
+text-shadow:
+0 4px 10px rgba(0,0,0,0.1),
+0 0 15px rgba(255,255,255,0.4);
+}
+
+h2{
+margin-top:20px;
+font-size:28px;
+}
+
+p{
+font-size:19px;
+line-height:1.9;
+}
+
+/* Premium Buttons */
+
+button{
+position:relative;
+overflow:hidden;
+padding:15px 38px;
+border:none;
+border-radius:50px;
+font-size:17px;
+font-weight:600;
+background:linear-gradient(135deg,#d9b99b,#c89a74);
+color:white;
+cursor:pointer;
+margin-top:30px;
+transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+button:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+button::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.25);
+transform:skewX(-25deg);
+transition:0.5s;
+}
+
+button:hover::before{
+left:120%;
+}
+
+/* Cake */
+
+.cake{
+position:relative;
+width:240px;
+height:210px;
+margin:35px auto;
+cursor:pointer;
+transition:0.5s;
+}
+
+.layer{
+position:absolute;
+width:100%;
+height:55px;
+border-radius:18px;
+left:0;
+}
+
+.layer1{
+bottom:0;
+background:#d9b99b;
+}
+
+.layer2{
+bottom:55px;
+background:#e9ccb0;
+}
+
+.layer3{
+bottom:110px;
+background:#f5dfca;
+}
+
+.candle{
+position:absolute;
+width:15px;
+height:42px;
+background:white;
+border-radius:10px;
+top:-30px;
+}
+
+.flame{
+position:absolute;
+width:18px;
+height:18px;
+background:gold;
+border-radius:50%;
+left:50%;
+top:-14px;
+transform:translateX(-50%);
+animation:flicker .3s infinite alternate;
+box-shadow:0 0 18px orange;
+}
+
+@keyframes flicker{
+from{
+transform:translateX(-50%) scale(1);
+}
+to{
+transform:translateX(-50%) scale(1.25);
+}
+}
+
+/* PREMIUM PHOTO GALLERY */
+
+.gallery{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:35px;
+perspective:1200px;
+}
+
+.photo-card{
+position:relative;
+width:230px;
+height:300px;
+border-radius:30px;
+overflow:hidden;
+transition:0.5s;
+transform-style:preserve-3d;
+cursor:pointer;
+background:rgba(255,255,255,0.25);
+backdrop-filter:blur(12px);
+box-shadow:
+0 10px 30px rgba(0,0,0,0.15),
+inset 0 1px 1px rgba(255,255,255,0.3);
+border:1px solid rgba(255,255,255,0.4);
+}
+
+.photo-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.5s;
+}
+
+.photo-card::before{
+content:'💖 Suru 💖';
+position:absolute;
+bottom:-100%;
+left:0;
+width:100%;
+padding:18px;
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.55),
+transparent
+);
+color:white;
+font-size:22px;
+font-weight:600;
+transition:0.5s;
+z-index:2;
+}
+
+.photo-card:hover{
+transform:
+rotateY(8deg)
+rotateX(4deg)
+translateY(-12px)
+scale(1.05);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.22),
+0 0 30px rgba(255,255,255,0.45);
+}
+
+.photo-card:hover img{
+transform:scale(1.12);
+}
+
+.photo-card:hover::before{
+bottom:0;
+}
+
+.photo-card::after{
+content:'';
+position:absolute;
+top:-120%;
+left:-40%;
+width:70%;
+height:300%;
+background:rgba(255,255,255,0.22);
+transform:rotate(25deg);
+transition:0.8s;
+}
+
+.photo-card:hover::after{
+left:130%;
+}
+
+/* Typing */
+
+.typing{
+font-size:20px;
+line-height:1.9;
+white-space:pre-line;
+margin-top:20px;
+}
+
+/* Emoji */
+
+.emoji{
+font-size:70px;
+margin-bottom:15px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+}
+
+/* Confetti */
+
+.confetti{
+position:absolute;
+width:12px;
+height:12px;
+top:-10px;
+animation:fall 4s linear forwards;
+}
+
+@keyframes fall{
+100%{
+transform:translateY(110vh) rotate(720deg);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Background -->
+
+<div class="bg">
+
+<div class="blur blur1"></div>
+<div class="blur blur2"></div>
+<div class="blur blur3"></div>
+
+<div class="heart" style="left:10%">🤍</div>
+<div class="heart" style="left:30%">✨</div>
+<div class="heart" style="left:50%">🤍</div>
+<div class="heart" style="left:70%">🌸</div>
+<div class="heart" style="left:90%">🤍</div>
+
+</div>
+
+<!-- Music -->
+
+<audio id="bgMusic" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+
+<div class="page active">
+
+<div class="card">
+
+<h1>Happy 14th Birthday Suru 🤍</h1>
+
+<p>
+A small premium birthday surprise made specially for you ✨
+</p>
+
+<button onclick="next()">
+Open Your Surprise 🎁
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div class="page">
+
+<div class="card">
+
+<h1>🎁 Surprise Reveal 🎁</h1>
+
+<p>
+Someone sweet, beautiful and precious is celebrating her birthday today...
+</p>
+
+<button onclick="showName()">
+Tap To Reveal 🤍
+</button>
+
+<h1 id="revealName"></h1>
+
+<button onclick="next()">
+Next ➜
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 3 -->
+
+<div class="page">
+
+<div class="card">
+
+<h1>🎂 Cut Your Birthday Cake 🎂</h1>
+
+<p id="cakeText">
+Make a wish and tap the cake 🤍
+</p>
+
+<div class="cake" id="birthdayCake" onclick="cutCake()">
+
+<div class="layer layer1"></div>
+<div class="layer layer2"></div>
+<div class="layer layer3"></div>
+
+<div class="candle" style="left:42%">
+
+<div class="flame"></div>
+
+<span style="
+position:absolute;
+top:-35px;
+font-size:24px;
+font-weight:bold;
+color:#7b5b4d;
+">
+1
+</span>
+
+</div>
+
+<div class="candle" style="left:56%">
+
+<div class="flame"></div>
+
+<span style="
+position:absolute;
+top:-35px;
+font-size:24px;
+font-weight:bold;
+color:#7b5b4d;
+">
+4
+</span>
+
+</div>
+
+</div>
+
+<h2 id="cakeMessage"></h2>
+
+<button id="cakeNext"
+onclick="next()"
+style="display:none;">
+
+Next ➜
+
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 4 -->
+
+<div class="page">
+
+<div class="card">
+
+<h1>🤍 A Special Message 🤍</h1>
+
+<p>
+You deserve all the happiness, smiles, love and beautiful memories in the world 🌸
+</p>
+
+<button onclick="next()">
+Next ➜
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 5 -->
+
+<div class="page">
+
+<div class="card">
+
+<h1>📸 Favorite Memories 📸</h1>
+
+<p>
+Replace these with your favorite photos together 🤍
+</p>
+
+<div class="gallery">
+
+<div class="photo-card">
+<img src="photo1.jpg">
+</div>
+
+<div class="photo-card">
+<img src="photo2.jpg">
+</div>
+
+<div class="photo-card">
+<img src="photo3.jpg">
+</div>
+
+</div>
+
+<button onclick="next()">
+Next ➜
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 6 -->
+
+<div class="page">
+
+<div class="card">
+
+<div class="emoji">
+🎉🥳🎂🤍✨
+</div>
+
+<h1>Happy Birthday Suru 🌸</h1>
+
+<p id="typingText" class="typing"></p>
+
+<button onclick="finalSurprise()">
+Final Surprise 🎁
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+let pages=document.querySelectorAll('.page');
+let index=0;
+
+function next(){
+
+if(index===0){
+document.getElementById('bgMusic').play();
+}
+
+pages[index].classList.remove('active');
+
+index++;
+
+if(index<pages.length){
+
+pages[index].classList.add('active');
+
+if(index===5){
+createConfetti();
+typeEffect();
+}
+
+}
+
+}
+
+/* Reveal */
+
+function showName(){
+
+document.getElementById('revealName').innerHTML=
+'🤍 SURU 🤍';
+
+}
+
+/* Cake */
+
+function cutCake(){
+
+let cake=document.getElementById('birthdayCake');
+
+cake.style.transform=
+'scale(0.92) rotate(-6deg)';
+
+document.querySelectorAll('.flame').forEach(flame=>{
+flame.style.display='none';
+});
+
+document.getElementById('cakeText').innerHTML=
+'🍰 Cake Cut Successfully!';
+
+document.getElementById('cakeMessage').innerHTML=
+'Happy 14th Birthday Suru 🤍';
+
+createConfetti();
+
+document.getElementById('cakeNext').style.display=
+'inline-block';
+
+}
+
+/* Confetti */
+
+function createConfetti(){
+
+for(let i=0;i<80;i++){
+
+let conf=document.createElement('div');
+
+conf.className='confetti';
+
+conf.style.left=Math.random()*100+'%';
+
+conf.style.background=
+`hsl(${Math.random()*360},100%,75%)`;
+
+conf.style.animationDuration=
+(2+Math.random()*3)+'s';
+
+document.body.appendChild(conf);
+
+setTimeout(()=>{
+conf.remove();
+},4000);
+
+}
+
+}
+
+/* Final Surprise */
+
+function finalSurprise(){
+
+alert('You are truly special 🤍✨');
+
+}
+
+/* Typing Message */
+
+const message = `Happy 14th Birthday Suru 🤍
+
+Today is your special day 🎂✨
+
+I hope your life is always filled with happiness, smiles, beautiful memories and endless success 🌸
+
+Keep shining, keep smiling and never forget how amazing you are 💕
+
+Once again... Happy Birthday 🥳🎉`;
+
+let i=0;
+
+function typeEffect(){
+
+if(i < message.length){
+
+document.getElementById('typingText').innerHTML +=
+message.charAt(i);
+
+i++;
+
+setTimeout(typeEffect,35);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
